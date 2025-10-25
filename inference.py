@@ -213,6 +213,9 @@ def main():
             warped_cloth = ((warped_cloth + 1) * 127.5).clip(0, 255).astype(np.uint8)
         else:
             warped_cloth = None
+    else:
+        resized_cloth = ri_cloth
+        resized_out_mask = ri_out_mask
 
     out_mask_array = np.array(resized_out_mask)
     out_mask_array = 255 - out_mask_array
